@@ -11,7 +11,14 @@ const Users = [
   { id: 7, name: 'Shubh', age: 22 },
   { id: 8, name: 'Swyam', age: 21 },
 ]
-
+const Links = [
+  { id: 1, name: 'Home', link: '/'},
+  { id: 2, name: 'Services', link: '/services'},
+  { id: 3, name: 'Portfolio', link: '/portfolio'},
+  { id: 4, name: 'About', link: '/about'},
+  { id: 5, name: 'Contact', link: '/contact'},
+  { id: 6, name: 'Team', link: '/team'},
+]
 
 const Team = [
   { id: 1, name: 'Keshav Thakur', age: 16, src: keshav, work: 'Sab kuch kaam mene hi kiya hai frontend se lekar backend tak ' },
@@ -20,7 +27,7 @@ const Team = [
   { id: 4, name: 'Abhinav Sagar', age: 16, src: abhinav, work: 'behen ke lode ne sirf crousal banaya hai' },
   { id: 5, name: 'Aman Verma', age: 15, src: aman, work: 'madarchod ne kuch kaam nahi kiya'},
   { id: 6, name: 'Prashik Humane', age: 17, src: prashik, work: 'registration page banaya hai'},
-  { id: 7, name: 'Kritika Yadav', age: 16, src: kritika, work: 'behen ki lodi ne kuch nhi kiya' },
+  { id: 7, name: 'Kritika Yadav', age: 16, src: kritika, work: 'make a booking page' },
   { id: 8, name: 'Anushka', age: 16, src: anushka, work: 'ye toh bahut cutie hai' },
 ];
 
@@ -29,4 +36,5 @@ const Team = [
 export {
   Users,
   Team,
+  Links,
 }
