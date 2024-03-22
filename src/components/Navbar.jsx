@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from '../assets/react.svg';
 import Login from './Login';
 import { useAuth0 } from "@auth0/auth0-react";
-
+import {Links} from './index';
 const Navbar = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
 
@@ -22,8 +22,8 @@ const Navbar = () => {
             className='h-20 w-20'
           />
       </Link>
-      <nav className="flex items-center gap-8 text-md  font-light">
-        <NavLink 
+      <nav className="flex items-center gap-8 text-md   font-light">
+        {/* <NavLink 
           className={({isActive})=>{
             `flex items-center gap-2 rounded-md hover:bg-gray-100/50 transition-colors  px-2 ${isActive ? 'text-white': 'text-black'}`
           }}
@@ -62,7 +62,22 @@ const Navbar = () => {
           to="/contact"
         >
           Contact
-        </NavLink>
+        </NavLink> */}
+        {
+          Links.map((link)=>{
+            return(
+              <NavLink 
+                className={({isActive})=>{
+                  `flex items-center gap-2 rounded-md hover:bg-gray-100/50 transition-colors  px-2 ${isActive ? 'text-white': 'text-black'}`
+                }}
+                to={link.link}
+              >
+                {link.name}
+              </NavLink>
+            
+            )
+          })
+        }
       </nav>
       <div>
           
@@ -70,7 +85,7 @@ const Navbar = () => {
           className='border-2 font-thin py-2 px-3 rounded-md bg-green-400 border-green-700'
           onClick={()=> loginWithRedirect()}
           to="/login"
-        >
+          >
           Login/Sign Up
         </Link>
 

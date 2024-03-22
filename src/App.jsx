@@ -13,7 +13,8 @@ function App() {
 
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/>
+
       <Login/>
       <hr />
       <About/>
@@ -21,7 +22,7 @@ function App() {
       <Services/>
         <Home/>
         {/* <Outline/> */}
-      <Footer/>
+      <Footer/> */}
 
 
     </>
