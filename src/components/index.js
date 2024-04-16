@@ -18,17 +18,18 @@ const Links = [
   { id: 4, name: 'About', link: '/about'},
   { id: 5, name: 'Contact', link: '/contact'},
   { id: 6, name: 'Team', link: '/team'},
+  // { id: 7, name: 'Login', link: '/login'},
 ]
 
 const Team = [
-  { id: 1, name: 'Keshav Thakur', age: 16, src: keshav, work: 'Sab kuch kaam mene hi kiya hai frontend se lekar backend tak ' },
-  { id: 2, name: 'Abhay Sagar', age: 15, src: abhay , work: 'Saare buutons ko work karaya hai bus'},
-  { id: 3, name: 'Anurag Kumar', age: 17, src: anurag, work: 'Saare images ko lagaya hai'},
-  { id: 4, name: 'Abhinav Sagar', age: 16, src: abhinav, work: 'behen ke lode ne sirf crousal banaya hai' },
-  { id: 5, name: 'Aman Verma', age: 15, src: aman, work: 'madarchod ne kuch kaam nahi kiya'},
-  { id: 6, name: 'Prashik Humane', age: 17, src: prashik, work: 'registration page banaya hai'},
-  { id: 7, name: 'Kritika Yadav', age: 16, src: kritika, work: 'make a booking page' },
-  { id: 8, name: 'Anushka', age: 16, src: anushka, work: 'ye toh bahut cutie hai' },
+  { id: 1, name: 'Keshav Thakur', age: 16, src: keshav, work: 'Turn the website into react, making the home page, login page' },
+  { id: 2, name: 'Abhay Sagar', age: 15, src: abhay , work: 'make the services page, about page'},
+  { id: 3, name: 'Anurag Kumar', age: 17, src: anurag, work: ' create a api service for geolocation services'},
+  { id: 4, name: 'Abhinav Sagar', age: 16, src: abhinav, work: 'crousal page' },
+  { id: 5, name: 'Aman Verma', age: 15, src: aman, work: 'create the image and other graphics part'},
+  { id: 6, name: 'Prashik Humane', age: 17, src: prashik, work: 'make the contact page'},
+  { id: 7, name: 'Kritika Yadav', age: 16, src: kritika, work: 'make a payment page' },
+  { id: 8, name: 'Anushka', age: 16, src: anushka, work: 'make a footer page' },
 ];
 
 

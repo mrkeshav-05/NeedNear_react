@@ -11,7 +11,7 @@ const Navbar = () => {
   // const { data: session }: any = useSession();
   // const [visible, setVisible] = useState(false)
   return (
-    <nav className="flex  flex-row items-center h-16 px-4 border-b border-gray-200/50 backdrop-filter backdrop-blur-sm/t-5 justify-between gap-4 md:gap-6 lg:gap-8 w-full  ">
+    <nav className="flex  flex-row items-center  py-2 px-4 border-b border-gray-200/50 backdrop-filter backdrop-blur-sm/t-5 justify-between gap-4 md:gap-6 lg:gap-8 w-full  ">
       <Link 
         className="flex items-center gap-2 text-lg font-semibold" 
         to="/"
