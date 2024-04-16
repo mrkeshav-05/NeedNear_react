@@ -11,37 +11,7 @@ import Portfolio from './components/Portfolio.jsx'
 import Navbar from './components/Navbar.jsx'
 import '@radix-ui/themes/styles.css';
 import Login from './components/Login.jsx'
-
-// const router = createBrowserRouter([ 
-//   {
-//     path: '/',
-//     errorElement: <h1 className='text-center text-4xl'>Not found Bro</h1>,
-//     element: <Layout />,
-//     children: [
-//       {
-//         path: '/',
-//         element: <Home />,
-//       },
-//       {
-//         path: '/about',
-//         element: <About />,
-//       },
-//       {
-//         path: '/contact',
-//         element: <Contact />,
-//       },
-//       {
-//         path: '/services',
-//         element: <Services />,
-//       },
-//       {
-//         path: '/portfolio',
-//         element: <Portfolio />,
-//       },
-//     ]
-//   }
-// ])
-
+import Signup from './components/Signup.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>} errorElement={"You are in the worng generation bro"}>
@@ -51,6 +21,7 @@ const router = createBrowserRouter(
       <Route path='services' element={<Services/>}/>
       <Route path='portfolio' element={<Portfolio/>}/>
       <Route path='login' element={<Login/>} />
+      <Route path='signup' element={<Signup/>} />
     </Route>
   )
 )
@@ -61,10 +32,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}/>
   </React.StrictMode>, 
 
-  // <BrowserRouter>
-  //   <App/>
-  //   {/* <RouterProvider router={router}/> */}
-  //   {/* <Route path="/" element={Navbar}/> */}
-  //   {/* <Route path="/login" element={Login}/> */}
-  // </BrowserRouter>,
 )
