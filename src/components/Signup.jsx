@@ -32,9 +32,17 @@ const Signup = () => {
   const submitForm = (e) => {
     e.preventDefault()
 
+    console.log(data)
     // data Validate
 
+
     // call server API for sending data
+    signUp(data).then((res) => {
+      console.log(res)
+      console.log("success log")
+    }).catch((err) => {
+      console.log(err)
+    })
 
     
   }
@@ -88,7 +96,6 @@ const Signup = () => {
               <div className="">
                 <label
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-
                 >
                   Password
                 </label>

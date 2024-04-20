@@ -14,10 +14,10 @@ const Users = [
 const Links = [
   { id: 1, name: 'Home', link: '/'},
   { id: 2, name: 'Services', link: '/services'},
-  { id: 3, name: 'Portfolio', link: '/portfolio'},
+  // { id: 3, name: 'Portfolio', link: '/portfolio'},
   { id: 4, name: 'About', link: '/about'},
   { id: 5, name: 'Contact', link: '/contact'},
-  { id: 6, name: 'Team', link: '/team'},
+  // { id: 6, name: 'Team', link: '/team'},
   // { id: 7, name: 'Login', link: '/login'},
 ]
 
