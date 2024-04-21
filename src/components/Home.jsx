@@ -1,9 +1,12 @@
 import React from 'react'
+import Carousel from './carousel';
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 
 const Home = () => {
   return (
     <div>
+      <Carousel />
+
       <AspectRatio ratio={16 / 8}>
   <img
     src="https://images.unsplash.com/photo-1479030160180-b1860951d696?&auto=format&fit=crop&w=1200&q=80"
