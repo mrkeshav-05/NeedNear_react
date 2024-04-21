@@ -8,7 +8,7 @@ const Navbar = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   return (
-    <nav className="flex  bg-white  border  flex-row items-center  py-2 px-4 border-b border-gray-200/50 backdrop-filter backdrop-blur-sm/t-5 justify-between gap-4 md:gap-6 lg:gap-8 w-full  ">
+    <nav className="flex  bg-black shadow-lg fill-neutral-700 shadow-white fixed z-20   text-white  flex-row items-center  py-2 px-4 border-b border-gray-200/50 backdrop-filter backdrop-blur-sm/t-5 justify-between gap-4 md:gap-6 lg:gap-8 w-full  ">
       <Link
         className="flex items-center gap-2 text-lg font-semibold"
         to="/"

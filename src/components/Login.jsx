@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const Login = () => {
 
   return (
-    <div>
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm max-w-md mx-auto flex-1" data-v0-t="card">
+    <div className='pt-28 border-b-orange-50'>
+      <div className="rounded-lg border bg-card bg-white text-black text-card-foreground shadow-sm max-w-md mx-auto flex-1" data-v0-t="card">
         <div className="flex flex-col space-y-1.5 p-6 text-center pb-0">
           <h3 className="whitespace-nowrap tracking-tight  text-3xl text-slate-700">Login</h3>
           <p className="text-sm text-muted-foreground">Enter your email below to login to your account.</p>
