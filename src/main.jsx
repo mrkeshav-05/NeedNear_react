@@ -12,6 +12,8 @@ import Navbar from './components/Navbar.jsx'
 import '@radix-ui/themes/styles.css';
 import Login from './components/Login.jsx'
 import Signup from './components/Signup.jsx'
+import Payment from './components/Payment.jsx'
+import Slot from './components/Slot.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>} errorElement={"You are in the worng generation bro"}>
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
       <Route path='portfolio' element={<Portfolio/>}/>
       <Route path='login' element={<Login/>} />
       <Route path='signup' element={<Signup/>} />
+      <Route path='payment' element={<Payment/>}/>
+      <Route path='slot' element={<Slot/>}/>
     </Route>
   )
 )

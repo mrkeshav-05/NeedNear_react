@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-      <div className='text-white  font-serif  bg-black divide-y'>
+      <div className=' font-serif bg-[#b3acab]  divide-y'>
         <div className='h-96 flex justify-between mx-6 align-middle py-16'>
           <div className='   h-full flex flex-col justify-center items-center'>
             <h1 className='text-3xl'>LOGO</h1>

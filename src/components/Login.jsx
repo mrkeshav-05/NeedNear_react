@@ -13,40 +13,40 @@ const Login = () => {
         </div>
         <div className="p-6 space-y-4">
           <form action="">
-          <div className="space-y-2">
-            <label
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              for="email"
-            >
-              Email
-            </label>
-            <input
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              id="email"
-              placeholder="mrkeshav.05@gmail.com"
-              required=""
-              type="email"
-            />
-          </div>
-          <div className="space-y-2">
-            <label
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              for="password"
-            >
-              Password
-            </label>
-            <input
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              id="password"
-              required=""
-              type="password"
-            />
-          </div>
+            <div className="space-y-2">
+              <label
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="email"
+                placeholder="mrkeshav.05@gmail.com"
+                required=""
+                type="email"
+              />
+            </div>
+            <div className="space-y-2">
+              <label
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="password"
+              >
+                Password
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="password"
+                required=""
+                type="password"
+              />
+            </div>
 
           </form>
-          
+
         </div>
-        
+
         <div className="flex items-center pb-2  justify-center">
           <Link className="inline-flex items-center w-3/4  justify-center whitespace-nowrap text-xl font-thin text-slate-800 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-lg bg-green-400 border-2 border-green-700  from-teal-500 to-cyan-600">
             Login
