@@ -15,11 +15,6 @@ import Signup from './components/Signup.jsx'
 import Payment from './components/Payment.jsx'
 import Slot from './components/Slot.jsx'
 import { services } from './components/index.js'
-import Cloth from './sections/Cloth.jsx'
-import Massage from './sections/Massage.jsx'
-import Plumbing from './sections/Plumbing.jsx'
-import House from './sections/House.jsx'
-import Technician from './sections/Technician.jsx'
 import Service from './sections/Service.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(

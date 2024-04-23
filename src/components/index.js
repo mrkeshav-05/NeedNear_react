@@ -37,19 +37,19 @@ const Team = [
 
 const services = [
   {
-    id: 1, name: 'Plumbing', desc: 'Plumbing', img: plumbing, page: 'Plumbing', url: 'plumbing'
+    id: 1, name: 'Plumbing', desc: 'Plumbing', img: plumbing, page: 'Plumbing', url: 'plumbing', content:"somthing is cooking and working on the plumbing project at https http:// plumbing"
   },
   {
-    id: 2, name: 'Technician', desc: 'Technician', img: technecian, page: 'Technician', url: 'technecian'
+    id: 2, name: 'Technician', desc: 'Technician', img: technecian, page: 'Technician', url: 'technecian', content:"somthing is cooking and working on the plumbing project at https http:// plumbing"
   },
   {
-    id: 3, name: 'House Cleaning', desc: 'House Cleaning', img: housecleaning, page: 'House', url: 'house'
+    id: 3, name: 'House Cleaning', desc: 'House Cleaning', img: housecleaning, page: 'House', url: 'house', content:"somthing is cooking and working on the plumbing project at https http:// plumbing"
   },
   {
-    id: 4, name: 'Cloth Washing', desc: 'Cloth Washing', img: housecleaning, page: 'Cloth', url: 'cloth'
+    id: 4, name: 'Cloth Washing', desc: 'Cloth Washing', img: housecleaning, page: 'Cloth', url: 'cloth', content:"somthing is cooking and working on the plumbing project at https http:// plumbing"
   },
   {
-    id: 5, name: 'Massage', desc: 'Massage', img: massage, page: 'Massage', url: 'massage'
+    id: 5, name: 'Massage', desc: 'Massage', img: massage, page: 'Massage', url: 'massage', content:"somthing is cooking and working on the plumbing project at https http:// plumbing"
   },
   
 ];

@@ -45,16 +45,14 @@ const Navbar = () => {
       <div>
 
         <Link
-          className='border-2 font-thin py-2 px-3 rounded-md bg-[#5aa6b6] border-green-700'
+          className='border-2 font-thin py-2 px-10 rounded-md bg-[#5aa6b6] border-green-700'
           onClick={() => loginWithRedirect()}
           to="/login"
         >
-          Login/Sign Up
+          Login
         </Link>
 
-        <Link>
-          Profile
-        </Link>
+        
 
 
       </div>

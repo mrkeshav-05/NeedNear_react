@@ -18,10 +18,10 @@ const Services = () => {
                 to={service.url}
               >
                 <div 
-                className=' border hover:scale-105 transition-transform rounded-3xl overflow-hidden'
+                className=' border rounded-3xl overflow-hidden'
               >
-                <div className=' border'>
-                <img src={service.img} alt="" width={200} className='w-96'/>
+                <div className=' border overflow-hidden'>
+                <img src={service.img} alt="" width={200} className='w-96 hover:scale-110  transition-transform'/>
                 </div>
                 <h1 className='text-center text-white text-xl py-2 '>{service.name}</h1>
               </div>
