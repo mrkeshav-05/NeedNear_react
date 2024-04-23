@@ -8,7 +8,7 @@ const Navbar = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   return (
-    <nav className="flex bg-[#032830] font-serif  text-white fill-neutral-700 shadow-white  z-20    flex-row items-center  py-4 px-12 border-b border-gray-200/50 backdrop-filter backdrop-blur-sm/t-5 justify-between gap-4 md:gap-6 lg:gap-8 w-full  ">
+    <nav className="flex fixed bg-[#032830] font-serif  text-white fill-neutral-700 shadow-white  z-20    flex-row items-center  py-4 px-12 border-b border-gray-200/50 backdrop-filter backdrop-blur-sm/t-5 justify-between gap-4 md:gap-6 lg:gap-8 w-full  ">
       <Link
         className="flex items-center gap-2 text-lg font-semibold"
         to="/"
@@ -18,7 +18,7 @@ const Navbar = () => {
           alt="logo"
           className='h-20 w-20 rounded-md'
         />
-        <h1 className='text-3xl font-serif'>Need <br />Near</h1>
+        <h1 className='text-3xl font-sans'>Need <br />Near</h1>
       </Link>
       <nav className="flex items-center gap-8 text-md invisible lg:visible absolute  lg:relative font-light">
         {

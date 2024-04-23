@@ -1,25 +1,37 @@
 import React from 'react'
 
+import {services} from './index.js'
+import { Link } from 'react-router-dom'
 const Services = () => {
+
+  
+
   return (
-    <div>
-      <div class="w-full py-12 lg:py-16"><div class="container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10"><div class="space-y-3"><h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-        Our Services
-      </h1><p class="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          We offer a variety of services to meet your needs. Our team is
-          dedicated to providing the best solutions for you.
-        </p></div><div class="grid max-w-sm grid-cols-2 gap-4 mx-auto md:grid-cols-3 lg:max-w-none lg:grid-cols-3 xl:gap-6"><div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col items-start p-6" data-v0-t="card"><div class="flex items-center justify-start space-x-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><div class="flex flex-col space-y-1.5 p-6 pb-0"><div class="font-bold">Web Development</div><div class="text-sm">Expert web development services.</div></div></div><div class="p-6 pt-4 flex-1"><p class="text-sm text-gray-500"></p></div><div class="flex items-center p-6"><a class="inline-flex items-center underline underline-offset-2 underline-offset-2 translate-y-0.5 text-sm font-medium ml-auto space-x-2 text-gray-900 transition-colors hover:text-gray-900/80 dark:text-gray-100 hover:text-gray-100 dark:hover:text-gray-100/80" href="#">
-          Learn More
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rotate-[-15deg] translate-x-0.5 peer-group-inherit"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col items-start p-6" data-v0-t="card"><div class="flex items-center justify-start space-x-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg><div class="flex flex-col space-y-1.5 p-6 pb-0"><div class="font-bold">Mobile App Development</div><div class="text-sm">
-            Custom mobile app development solutions.
-          </div></div></div><div class="p-6 pt-4 flex-1"><p class="text-sm text-gray-500"></p></div><div class="flex items-center p-6"><a class="inline-flex items-center underline underline-offset-2 underline-offset-2 translate-y-0.5 text-sm font-medium ml-auto space-x-2 text-gray-900 transition-colors hover:text-gray-900/80 dark:text-gray-100 hover:text-gray-100 dark:hover:text-gray-100/80" href="#">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rotate-[-15deg] translate-x-0.5 peer-group-inherit"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col items-start p-6" data-v0-t="card"><div class="flex items-center justify-start space-x-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg><div class="flex flex-col space-y-1.5 p-6 pb-0"><div class="font-bold">Cloud Services</div><div class="text-sm">
-              Secure and scalable cloud infrastructure.
-            </div></div></div><div class="p-6 pt-4 flex-1"><p class="text-sm text-gray-500"></p></div><div class="flex items-center p-6"><a class="inline-flex items-center underline underline-offset-2 underline-offset-2 translate-y-0.5 text-sm font-medium ml-auto space-x-2 text-gray-900 transition-colors hover:text-gray-900/80 dark:text-gray-100 hover:text-gray-100 dark:hover:text-gray-100/80" href="#">
-              Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 rotate-[-15deg] translate-x-0.5 peer-group-inherit"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></div></div></div></div>
-    </div>
+    <section className='bg-[#032830] flex justify-center flex-col items-center py-10'>
+      <h1 className='text-center text-white text-4xl italic font-semibold'>Our Services</h1>
+      <p className='text-center text-[#5aa6b6] text-xl py-4 italic'>We offer variety of services to meet your needs. <br /> Our team is dedicated to providing the best solutions for you.</p>
+      <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-3 mx-10  '>
+        {
+          services.map((service)=>{
+            return (
+              <Link key={service.id}
+                to={service.url}
+              >
+                <div 
+                className=' border hover:scale-105 transition-transform rounded-3xl overflow-hidden'
+              >
+                <div className=' border'>
+                <img src={service.img} alt="" width={200} className='w-96'/>
+                </div>
+                <h1 className='text-center text-white text-xl py-2 '>{service.name}</h1>
+              </div>
+              </Link>
+              
+            )
+          })
+        }
+      </div>
+    </section>
   )
 }
 

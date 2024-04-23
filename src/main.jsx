@@ -14,6 +14,13 @@ import Login from './components/Login.jsx'
 import Signup from './components/Signup.jsx'
 import Payment from './components/Payment.jsx'
 import Slot from './components/Slot.jsx'
+import { services } from './components/index.js'
+import Cloth from './sections/Cloth.jsx'
+import Massage from './sections/Massage.jsx'
+import Plumbing from './sections/Plumbing.jsx'
+import House from './sections/House.jsx'
+import Technician from './sections/Technician.jsx'
+import Service from './sections/Service.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>} errorElement={"You are in the worng generation bro"}>
@@ -26,6 +33,13 @@ const router = createBrowserRouter(
       <Route path='signup' element={<Signup/>} />
       <Route path='payment' element={<Payment/>}/>
       <Route path='slot' element={<Slot/>}/>
+      {
+        services.map((service)=>{
+          return (
+            <Route path={`/services/${service.url}`} element={<Service service={service}/>} key={service.id}  />
+          )
+        })
+      }
     </Route>
   )
 )
