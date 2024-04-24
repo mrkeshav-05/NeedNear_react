@@ -30,6 +30,7 @@ const router = createBrowserRouter(
       <Route path='payment' element={<Payment/>}/>
       <Route path='slot' element={<Slot/>}/>
       <Route path='upi' element={<Upi/>}/>
+
       {
         services.map((service)=>{
           return (
