@@ -39,7 +39,7 @@ const Crousal = () => {
 
 
   return (
-    <div className='h-96 flex justify-center pt-40'>
+    <div className='h-96 flex justify-center my-10'>
     <button onClick={moveLeft}><img className='w-8 h-8' src="https://i.pinimg.com/564x/83/26/9e/83269efa1e0d1370f5f7f9b7b38819e2.jpg" alt="" /></button>
     <div className='h-96 w-[1200px] overflow-hidden mx-5'>
       <img className='h-96 w-[1200px]' src={carousel_data[index]} alt="" />
