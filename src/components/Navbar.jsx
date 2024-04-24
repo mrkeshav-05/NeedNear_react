@@ -29,7 +29,7 @@ const Navbar = () => {
               >
                 <NavLink
                   className={({ isActive }) => {
-                    `flex items-center gap-2 rounded-md hover:bg-gray-100/50 transition-colors  px-2 ${isActive ? 'text-white' : 'text-black'}`
+                    `flex items-center gap-2 rounded-md hover:bg-gray-100/50 hover: transition-colors  px-2 ${isActive ? 'text-white' : 'text-black'}`
                   }}
                   to={link.link}
                 >
