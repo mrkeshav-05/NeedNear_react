@@ -3,7 +3,7 @@ import React from 'react'
 
 // import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import { Carousel } from './Crousal';
-import Card from './Cards';
+import Card from './cards';
 import Horizontal_slider from './horizontal_slider';
 
 
