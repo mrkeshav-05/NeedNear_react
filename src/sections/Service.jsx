@@ -2,11 +2,12 @@ import React from "react";
 
 const Service = (props) => {
   return (
-    <div className="flex flex-row justify-center my-16 m-10">
-      <div className="bg-gray-200 p-4 flex  items-center h-170 w-full rounded-lg shadow-lg">
+    <section className="flex bg-[#032830] w-full  flex-row justify-center py-20">
+      <div className="bg-gray-200 p-4 m-4 flex  items-center  w-full rounded-lg shadow-lg">
         <div className=" object-cover flex-none  h-80 w-90">
           <img
-            className="object-cover h-full w-full"
+            className="object-cover "
+            width={400}
             src={props.service.img}
             alt=""
           />
@@ -36,7 +37,7 @@ const Service = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Service;
