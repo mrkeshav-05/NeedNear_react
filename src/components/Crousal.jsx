@@ -105,13 +105,27 @@ const Images = ({ imgIndex }) => {
 
 const Dots = ({ imgIndex, setImgIndex }) => {
   return (
-    <div className='h-96 flex justify-center my-10'>
-    <button onClick={moveLeft}><img className='w-8 h-8' src="https://i.pinimg.com/564x/83/26/9e/83269efa1e0d1370f5f7f9b7b38819e2.jpg" alt="" /></button>
-    <div className='h-96 w-[1200px] overflow-hidden mx-5'>
-      <img className='h-96 w-[1200px]' src={carousel_data[index]} alt="" />
+    <div className="mt-4 flex w-full justify-center gap-2">
+      {imgs.map((_, idx) => {
+        return (
+          <button
+            key={idx}
+            onClick={() => setImgIndex(idx)}
+            className={`h-3 w-3 rounded-full transition-colors ${
+              idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
+            }`}
+          />
+        );
+      })}
     </div>
-    <button onClick={moveRight}><img className='w-8 h-8 rotate-180' src="https://i.pinimg.com/564x/83/26/9e/83269efa1e0d1370f5f7f9b7b38819e2.jpg" alt="" /></button>
-  </div>
-  )
-}
+  );
+};
 
+const GradientEdges = () => {
+  return (
+    <>
+      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
+      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
+    </>
+  );
+};
