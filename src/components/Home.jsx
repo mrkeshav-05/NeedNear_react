@@ -1,8 +1,6 @@
 import React from 'react'
-import Carousel from './carousel';
-// import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import Crousal from './Crousal';
-import Card from './cards';
+import Card from './Cards';
 
 const Home = () => {
   const slider_data = ['Laundry', 'Electrician', 'Plumber', 'Carpenter', 'Painter']
