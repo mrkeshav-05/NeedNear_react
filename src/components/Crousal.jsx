@@ -115,4 +115,3 @@ const Dots = ({ imgIndex, setImgIndex }) => {
   )
 }
 
-export default Crousal
