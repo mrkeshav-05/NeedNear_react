@@ -1,5 +1,5 @@
 import {keshav, anurag, abhay, kritika, aman, anushka, prashik, abhinav} from '../assets/teampics'
-import { plumbing, technecian, housecleaning, massage } from '../assets/images';
+import { plumbing, technecian, housecleaning, massage, cloth2 } from '../assets/images';
 
 const Users = [
   { id: 1, name: 'Keshav', age: 19 },
@@ -87,7 +87,7 @@ const services = [
     id: 4,
     name: 'Cloth Washing',
     desc: 'Cloth Washing',
-    img: housecleaning,
+    img: cloth2,
     page: 'Cloth',
     url: 'cloth',
     title: 'Laundry Services',
