@@ -118,6 +118,7 @@ const Dots = ({ imgIndex, setImgIndex }) => {
         );
       })}
     </div>
+
   );
 };
 
@@ -129,3 +130,4 @@ const GradientEdges = () => {
     </>
   );
 };
+

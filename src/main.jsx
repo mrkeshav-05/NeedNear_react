@@ -16,6 +16,7 @@ import Payment from './components/Payment.jsx'
 import Slot from './components/Slot.jsx'
 import { services } from './components/index.js'
 import Service from './sections/Service.jsx'
+import Upi from './sections/Upi.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     // <Route path='/' element={<Layout/>} errorElement={"You are in the worng generation bro"}>
@@ -29,6 +30,9 @@ const router = createBrowserRouter(
       <Route path='signup' element={<Signup/>} />
       <Route path='payment' element={<Payment/>}/>
       <Route path='slot' element={<Slot/>}/>
+      <Route path='payment/upi' element={<Upi/>}/>
+
+
       {
         services.map((service)=>{
           return (

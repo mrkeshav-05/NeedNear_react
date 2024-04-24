@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { cardbg } from '../assets/images'
 const Payment = () => {
   const options = [
     { id: 1, name: 'Credit Card' },
@@ -10,28 +9,112 @@ const Payment = () => {
     { id: 5, name: 'Wallet' },
   ]
   return (
-    <section className='font-serif'>
-      <h1>Choose payment options</h1>
-      <div className='flex justify-center gap-5 text-xl font-serif font-semibold'>
-        {
-          options.map((option)=>{
-            return (
-              <div key={option.id} className='flex hover:text-red-500'>
-                <Link to="/de">
-                  {option.name}
-                </Link>
+    <div class="bg-[#032830] min-h-screen flex flex-col items-center justify-center text-white">
+      <main class="w-full max-w-4xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="text-3xl font-bold">Choose payment options</h1>
+          <div class="space-x-4">
+            <Link 
+              to="/payment"
+            >
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 text-white bg-[#1E6091]">
+              Card
+            </button>
+            </Link>
+            <Link
+              to="/payment/upi"
+            >
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 px-4 py-2 text-white hover:bg-[#1E6091]">
+              UPI
+            </button>
+            </Link>
+            
+            
+            
+          </div>
+        </div>
+        <div class="bg-white text-black rounded-lg p-8 flex">
+          <div class="w-1/3 bg-[#1E6091] text-white p-4 rounded-lg mr-8">
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mb-4 bg-[#0F3460]">
+              Previous Step
+            </button>
+            <div class="flex flex-col items-center justify-center space-y-4">
+              <div class="bg-[#74C69D] p-4 rounded-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-16 w-32"
+                >
+                  <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                  <line x1="2" x2="22" y1="10" y2="10"></line>
+                </svg>
               </div>
-            )
-          
-          })
-        }
-      </div>
-      <div>
-        <img src={cardbg}
-        width={1000}
-        alt="" />
-      </div>
-    </section>
+              <div class="text-center">
+                <p class="text-sm">** ** ** **</p>
+                <p class="text-sm">09/20</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-2/3">
+            <h2 class="text-2xl font-bold mb-6">Your Payment Details</h2>
+            <div class="space-y-4">
+              <div>
+                <label for="cardholder-name" class="block mb-1">
+                  CARDHOLDER NAME
+                </label>
+                <input
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  id="cardholder-name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div>
+                <label for="card-number" class="block mb-1">
+                  CARD NUMBER
+                </label>
+                <input
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  id="card-number"
+                  placeholder="Enter valid card number"
+                />
+              </div>
+              <div class="flex justify-between">
+                <div class="w-1/2 pr-2">
+                  <label for="expiry-date" class="block mb-1">
+                    EXPIRATION DATE
+                  </label>
+                  <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="expiry-date"
+                    placeholder="Enter card expiry date"
+                  />
+                </div>
+                <div class="w-1/2 pl-2">
+                  <label for="cvc" class="block mb-1">
+                    CVV
+                  </label>
+                  <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="cvc"
+                    placeholder="CVV"
+                  />
+                </div>
+              </div>
+              <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full mt-6 bg-[#1E6091]">
+                Pay Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   )
 }
 
