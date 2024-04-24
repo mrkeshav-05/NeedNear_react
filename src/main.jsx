@@ -19,7 +19,8 @@ import Service from './sections/Service.jsx'
 import Upi from './sections/Upi.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout/>} errorElement={"You are in the worng generation bro"}>
+    // <Route path='/' element={<Layout/>} errorElement={"You are in the worng generation bro"}>
+      <Route path='/' element={<Layout/>} >
       <Route path='' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='contact' element={<Contact/>}/>

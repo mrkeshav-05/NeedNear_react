@@ -1,56 +1,116 @@
-import React from 'react'
-import { FaAngleRight } from "react-icons/fa6";
-import { FaAngleLeft } from "react-icons/fa6";
+import React, { useEffect, useState } from "react";
+import { motion, useMotionValue } from "framer-motion";
 
+const imgs = [
+  "src/assets/carousel_assests/1.jpeg",
+  "src/assets/carousel_assests/2.jpeg",
+  "src/assets/carousel_assests/3.jpeg",
+  "src/assets/carousel_assests/4.jpeg"
 
-const Crousal = () => {
+];
 
+const ONE_SECOND = 1000;
+const AUTO_DELAY = ONE_SECOND * 10;
+const DRAG_BUFFER = 50;
 
+const SPRING_OPTIONS = {
+  type: "spring",
+  mass: 3,
+  stiffness: 400,
+  damping: 50,
+};
 
-  let carousel_data = [
-    "https://imgs.search.brave.com/_cHcWUIspM8IFSnTipcATQS2aUZzxjy3BZsmb9z8kMk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU3/NjM5MzMyL3Bob3Rv/L3dpbnRlci1sYW5k/c2NhcGUtd2l0aC1z/bm93LWFuZC10cmVl/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Qi1BWFBWY2Nq/YzBSWmZGQXgzQmlp/SkZyaXlLNGNEcjVV/YXRuRE5ZNzQ4cz0",
-    "https://imgs.search.brave.com/9t_JppSd-lvkLod0ka_JoohrdsiUjIQybESPt0ikSvo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pcHQu/aW1naXgubmV0LzIw/MTY5MC94LzAvdWx0/aW1hdGUtZ3VpZGUt/dG8tbGFuZHNjYXBl/LXBob3RvZ3JhcGh5/LTEwOS1qcGc_YXV0/bz1jb21wcmVzcyxm/b3JtYXQmY2g9V2lk/dGgsRFBSJmRwcj0x/Jml4bGliPXBocC0z/LjMuMCZhdXRvPWZv/cm1hdCxjb21wcmVz/cyZmaXQ9Y3JvcCZo/PXVuZGVmaW5lZA",
-    "https://imgs.search.brave.com/fioN5Qu_QTlGyt9wXCP32Wd9RA29eVfI0zWXfn9c3Qc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTE3/MTg4Njg4L3Bob3Rv/L21vdW50YWluLWxh/bmRzY2FwZS53ZWJw/P2I9MSZzPTYxMng2/MTImdz0wJms9MjAm/Yz04MWY1SGFNdG9Q/TlVyZGZhNGhuUzhO/Y3dFZ0Q5dEgybm5U/VUJ1MjVNc3VnPQ"
-  ];
+export const Carousel = () => {
+  const [imgIndex, setImgIndex] = useState(0);
 
-  const [index, setIndex] = React.useState(0);
+  const dragX = useMotionValue(0);
 
-  function moveRight() {
-    setIndex((index + 1) % carousel_data.length);
-  }
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      const x = dragX.get();
 
-  function moveLeft() {
-    setIndex((index - 1 + carousel_data.length) % carousel_data.length);
-  }
+      if (x === 0) {
+        setImgIndex((pv) => {
+          if (pv === imgs.length - 1) {
+            return 0;
+          }
+          return pv + 1;
+        });
+      }
+    }, AUTO_DELAY);
 
-  const handleKeyDown = (event) => {
-    if (event.key === 'ArrowRight') {
-      moveRight();
-    } else if (event.key === 'ArrowLeft') {
-      moveLeft();
+    return () => clearInterval(intervalRef);
+  }, []);
+
+  const onDragEnd = () => {
+    const x = dragX.get();
+
+    if (x <= -DRAG_BUFFER && imgIndex < imgs.length - 1) {
+      setImgIndex((pv) => pv + 1);
+    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
+      setImgIndex((pv) => pv - 1);
     }
   };
 
-  React.useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  });
+  return (
+    <div className="relative overflow-hidden bg-neutral-950 py-8">
+      <motion.div
+        drag="x"
+        dragConstraints={{
+          left: 0,
+          right: 0,
+        }}
+        style={{
+          x: dragX,
+        }}
+        animate={{
+          translateX: `-${imgIndex * 100}%`,
+        }}
+        transition={SPRING_OPTIONS}
+        onDragEnd={onDragEnd}
+        className="flex cursor-grab items-center active:cursor-grabbing"
+      >
+        <Images imgIndex={imgIndex} />
+      </motion.div>
 
+      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+      <GradientEdges />
+    </div>
+  );
+};
 
+const Images = ({ imgIndex }) => {
+  return (
+    <>
+      {imgs.map((imgSrc, idx) => {
+        return (
+          <motion.div
+            key={idx}
+            style={{
+              backgroundImage: `url(${imgSrc})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            animate={{
+              scale: imgIndex === idx ? 0.95 : 0.85,
+            }}
+            transition={SPRING_OPTIONS}
+            className="h-96 w-[100%] shrink-0 rounded-xl bg-neutral-800 object-cover"
+          />
+        );
+      })}
+    </>
+  );
+};
 
-
+const Dots = ({ imgIndex, setImgIndex }) => {
   return (
     <div className='h-96 flex justify-center my-10'>
-    {/* <button onClick={moveLeft}><img className='w-8 h-8' src="https://i.pinimg.com/564x/83/26/9e/83269efa1e0d1370f5f7f9b7b38819e2.jpg" alt="" /></button> */}
-    <FaAngleLeft/>
+    <button onClick={moveLeft}><img className='w-8 h-8' src="https://i.pinimg.com/564x/83/26/9e/83269efa1e0d1370f5f7f9b7b38819e2.jpg" alt="" /></button>
     <div className='h-96 w-[1200px] overflow-hidden mx-5'>
       <img className='h-96 w-[1200px]' src={carousel_data[index]} alt="" />
     </div>
-    {/* <button onClick={moveRight}><img className='w-8 h-8 rotate-180' src="https://i.pinimg.com/564x/83/26/9e/83269efa1e0d1370f5f7f9b7b38819e2.jpg" alt="" /></button> */}
-    <FaAngleRight/>
-
+    <button onClick={moveRight}><img className='w-8 h-8 rotate-180' src="https://i.pinimg.com/564x/83/26/9e/83269efa1e0d1370f5f7f9b7b38819e2.jpg" alt="" /></button>
   </div>
   )
 }
