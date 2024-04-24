@@ -21,6 +21,7 @@ const Links = [
   // { id: 7, name: 'Login', link: '/login'},
   { id: 8, name: 'Payment', link: '/payment'},
   { id: 9, name: 'Slot' , link: '/slot'},
+  { id: 10, name: 'Upi', link: '/upi'}
 ]
 
 const Team = [
