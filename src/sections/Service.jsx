@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Service = (props) => {
   return (
     <section className="flex bg-[#032830] w-full  flex-row justify-center py-20">
@@ -30,9 +30,14 @@ const Service = (props) => {
                 </ul>
               </div>
 
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+<Link 
+  to="/slot"
+>
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
                 Book Now
               </button>
+</Link>
+              
             </div>
           </div>
         </div>

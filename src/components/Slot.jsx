@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Slot = () => {
   return (
@@ -169,9 +170,13 @@ const Slot = () => {
         </div>
       </div>
       <div className='flex justify-end mx-16'>
+        <Link to="/payment"
+        >
         <button className=' bg-green-600 border text-white text-xl rounded-full px-7 py-2 mt-5'>
           Book Now
         </button>
+        </Link>
+        
       </div>
     </section>
   )

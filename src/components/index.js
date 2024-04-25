@@ -19,8 +19,8 @@ const Links = [
   { id: 5, name: 'Contact', link: '/contact'},
   // { id: 6, name: 'Team', link: '/team'},
   // { id: 7, name: 'Login', link: '/login'},
-  { id: 8, name: 'Payment', link: '/payment'},
-  { id: 9, name: 'Slot' , link: '/slot'},
+  // { id: 8, name: 'Payment', link: '/payment'},
+  // { id: 9, name: 'Slot' , link: '/slot'},
   // { id: 10, name: 'Upi', link: '/upi'}
 ]
 

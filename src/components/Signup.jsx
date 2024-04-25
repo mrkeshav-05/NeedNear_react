@@ -48,12 +48,12 @@ const Signup = () => {
   }
 
   return (
-    <div className='py-4'>
-      <div className='class="rounded-lg border bg-card text-card-foreground shadow-sm max-w-md mx-auto flex-1" data-v0-t="card"'>
+    <div className='py-4 bg-[#032830] '>
+      <div className='class="rounded-lg bg-[#1E6091] text-white border bg-card text-card-foreground shadow-sm max-w-md mx-auto flex-1" data-v0-t="card"'>
         <div className="flex flex-col space-y-1.5 p-6 text-center pb-0">
-          <h3 className="whitespace-nowrap tracking-tight  text-3xl text-slate-700">Sign Up</h3>
+          <h3 className="whitespace-nowrap tracking-tight  text-3xl">Sign Up</h3>
           <p className="text-sm text-muted-foreground">Enter your details below to create an account.</p>
-          {JSON.stringify(data.name)}
+          {/* {JSON.stringify(data.name)} */}
           <div className="p-6 text-left flex flex-col ">
 
             <form onSubmit={submitForm}>
@@ -66,7 +66,7 @@ const Signup = () => {
                   Name
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-10 w-full text-black rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   id="name"
                   placeholder="Keshav Thakur"
                   required=""
@@ -83,7 +83,7 @@ const Signup = () => {
                   Email
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-10 w-full text-black rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   id="email"
                   placeholder="mrkeshav.05@gmail.com"
                   required=""
@@ -100,7 +100,7 @@ const Signup = () => {
                   Password
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-10 w-full text-black rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   id="password"
                   required=""
                   type="password"
@@ -112,13 +112,13 @@ const Signup = () => {
 
           </div>
           <div className="flex items-center pb-2  justify-center">
-            <Link className="inline-flex items-center w-3/4  justify-center whitespace-nowrap text-xl font-thin text-slate-800 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-lg bg-green-400 border-2 border-green-700  from-teal-500 to-cyan-600"
+            <Link className="inline-flex items-center w-3/4 text-white  justify-center whitespace-nowrap text-xl font-thin  ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-lg bg-green-400 border-2 border-green-700  from-teal-500 to-cyan-600"
             >
               Sign Up
             </Link>
 
           </div>
-          <div className="p-6 text-center text-sm space-y-2">
+          <div className="p-6 text-center text-black text-sm space-y-2">
             <p>
               Already have an account?
               <Link className="underline" to="/login">
