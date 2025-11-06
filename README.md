@@ -159,28 +159,29 @@ NeedNear_react/
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](./screenshots/home.png)
-*Modern landing page with interactive carousel and service cards*
+<img width="1435" height="807" alt="image" src="https://github.com/user-attachments/assets/1832877b-e76b-4ea4-bf1a-ff49245a10d0" />
+
 
 ### Services
-![Services](./screenshots/services.png)
-*Browse through various services with detailed descriptions*
+<img width="1440" height="808" alt="image" src="https://github.com/user-attachments/assets/e7d79c75-61e3-4d65-ab86-12a936eb7363" />
+
 
 ### About Us
-![About](./screenshots/about.png)
-*Learn about our team and achievements*
+<img width="1397" height="711" alt="image" src="https://github.com/user-attachments/assets/8e8245d3-276b-48cf-b885-b693aa52d367" />
+
+### Contact Us
+<img width="1437" height="520" alt="image" src="https://github.com/user-attachments/assets/21cea265-7472-45aa-a808-4d7f836b0e68" />
+
 
 ### Booking
-![Booking](./screenshots/booking.png)
-*Easy-to-use slot booking interface*
+<img width="1440" height="716" alt="image" src="https://github.com/user-attachments/assets/b2455c31-9a8d-4e1f-bacd-0f8582488d4e" />
+<img width="1435" height="675" alt="image" src="https://github.com/user-attachments/assets/f3e8aaa0-84b8-40bc-be65-771035f6e050" />
+
 
 ### Payment
-![Payment](./screenshots/payment.png)
-*Secure UPI payment integration*
+<img width="1156" height="531" alt="image" src="https://github.com/user-attachments/assets/d2522bbc-7519-4def-8598-bb1afb86b19d" />
+<img width="884" height="549" alt="image" src="https://github.com/user-attachments/assets/56ee6072-bf72-4d0b-9cab-2bac61332c0f" />
 
-### Portfolio
-![Portfolio](./screenshots/portfolio.png)
-*Showcase of our work and client projects*
 
 ## 🤝 Contributing
 
